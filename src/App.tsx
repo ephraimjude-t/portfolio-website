@@ -3,12 +3,15 @@ import Navbar from "./Components/navbar";
 import Home from "./Pages/home";
 import Skills from "./Pages/Skills";
 import Projects from "./Pages/Projects";
+import About from "./Pages/AboutMe";
+import Contact from "./Pages/Contact";
 import { useRef } from "react";
 
 const App: React.FC = () => {
   const homeRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (section: string): void => {
     switch (section) {
@@ -20,6 +23,9 @@ const App: React.FC = () => {
         break;
       case "projects":
         projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "about":
+        aboutRef.current?.scrollIntoView({ behavior: "smooth" });
         break;
       default:
         break;
@@ -40,6 +46,12 @@ const App: React.FC = () => {
 
         <motion.div ref={projectsRef} className="h-screen bg-purple-500">
           <Projects />
+        </motion.div>
+        <motion.div ref={aboutRef} className="h-screen bg-gray-500">
+          <About />
+        </motion.div>
+        <motion.div className="h-screen bg-red-500">
+          <Contact />
         </motion.div>
       </motion.div>
     </>

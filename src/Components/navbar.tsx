@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 interface NavbarProps {
   scrollToSection: (section: string) => void;
 }
