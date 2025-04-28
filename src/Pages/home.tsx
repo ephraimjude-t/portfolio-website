@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "../gradientanimation.css";
-import { motion } from "motion/react";
+import {motion} from "motion/react";
 
-//home page
-const Home = () => {
+
+const Home = ({ scrollToContact } : { scrollToContact: () => void }) => {
   const [loaded, setloaded] = useState(false);
 
   useEffect(() => {
@@ -11,19 +11,19 @@ const Home = () => {
   }, []);
 
   return (
-    
-    <motion.div className=" bg-[#242038] bg-gradient-to-r from [#242038] to-[#665A9E] h-screen w-full flex flex-col items-center relative overflow-hidden z-[0]" style={{
+    <motion.div
+      className="bg-[#242038] bg-gradient-to-r from-[#242038] to-[#665A9E] h-screen w-full flex flex-col items-center relative overflow-hidden z-[0]"
+      style={{
         animation: "gradient-bg 7s ease infinite",
         backgroundSize: "200% 200%",
-      }}>
-      
-      
+      }}
+    >
       <motion.p
-       initial={{ opacity: 0, scale: 0 }}
-       animate={{ opacity: 1, scale: 1 }}
-       transition={{
-        duration: 1,
-       }}
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1,
+        }}
         className={`
           text-[#CAC4CE] text-center font-bold font-montserrat z-[1] transition-opacity duration-500 ease-in-out ${
             loaded ? "opacity-100" : "opacity-0"
@@ -39,14 +39,12 @@ const Home = () => {
         Ephraim Jude
       </motion.p>
 
-      
       <motion.p
-       initial={{ opacity: 0, scale: 0, x: 0 }}
-       animate={{ opacity: 1, scale: 1, x: 0 }}
-       transition={{
-        duration: 1,
-       }}
-    
+        initial={{ opacity: 0, scale: 0, x: 0 }}
+        animate={{ opacity: 1, scale: 1, x: 0 }}
+        transition={{
+          duration: 1,
+        }}
         className={`
           text-[#CAC4CE] text-center font-semibold font-montserrat p-4 z-[1] transition-opacity duration-500 ease-in-out ${
             loaded ? "opacity-100" : "opacity-0"
@@ -63,15 +61,16 @@ const Home = () => {
       </motion.p>
 
       {/* Contact Me Button */}
-      <motion.div 
-      initial={{ opacity: 0, scale: 0}}
-      animate={{ opacity: 1, scale: 1}}
-      transition={{
-        duration: 1,
-         }}
-      
-      className="relative w-full flex justify-center">
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1,
+        }}
+        className="relative w-full flex justify-center"
+      >
         <button
+          onClick={scrollToContact}
           className={`
             bg-[rgba(144,103,198,0.5)] text-[#CAC4CE] rounded-[10px] font-Regular font-[16px] font-sans h-[5vh] z-[1] transition-transform duration-1000 ease-in-out ${
               loaded ? "translate-y-0" : "translate-y-20"
