@@ -11,6 +11,7 @@ const Home = ({ scrollToContact } : { scrollToContact: () => void }) => {
   }, []);
 
   return (
+    <div className="bg-[#242038] bg-gradient-to-r from-[#242038] to-[#665A9E]">
     <motion.div
       className="bg-[#242038] bg-gradient-to-r from-[#242038] to-[#665A9E] h-screen w-full flex flex-col items-center relative overflow-hidden z-[0]"
       style={{
@@ -60,7 +61,7 @@ const Home = ({ scrollToContact } : { scrollToContact: () => void }) => {
         Full-Stack Developer | DevOps Enthusiast | Automating the Future
       </motion.p>
 
-      {/* Contact Me Button */}
+      
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -88,6 +89,7 @@ const Home = ({ scrollToContact } : { scrollToContact: () => void }) => {
         </button>
       </motion.div>
     </motion.div>
+    </div>
   );
 };
 

@@ -1,3 +1,5 @@
+// src/App.tsx
+
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import Navbar from "./Components/navbar";
@@ -45,22 +47,25 @@ const App: React.FC = () => {
   return (
     <>
       <Navbar scrollToSection={scrollToSection} />
-      <motion.div className="flex flex-col w-full h-full">
-        <motion.div ref={homeRef} className="h-screen bg-blue-500">
-          <Home scrollToContact={() => scrollToSection("contact")} />  {/* Pass the function here */}
+      
+      <motion.div className="flex flex-col w-full min-h-screen overflow-hidden">
+        {/* Each of these sections is still h-screen as intended */}
+        <motion.div ref={homeRef} className="h-screen bg-[#242038]">
+          <Home scrollToContact={() => scrollToSection("contact")} />
         </motion.div>
 
-        <motion.div ref={skillsRef} className="h-screen bg-green-500">
+        <motion.div ref={skillsRef} className="h-screen bg-[#242038]">
           <Skills />
         </motion.div>
 
-        <motion.div ref={projectsRef} className="h-screen bg-purple-500">
+        <motion.div ref={projectsRef} className="h-screen bg-[#242038]">
           <Projects />
         </motion.div>
-        <motion.div ref={aboutRef} className="h-screen bg-gray-500">
+        <motion.div ref={aboutRef} className="h-screen bg-[#242038]">
           <About />
         </motion.div>
-        <motion.div ref={contactRef} className="h-screen border-b-2 bg-red-500">
+
+        <motion.div ref={contactRef} className="bg-[#242038]">
           <Contact />
         </motion.div>
       </motion.div>

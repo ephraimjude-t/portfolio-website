@@ -85,7 +85,7 @@ const Contactme = () => {
 
         <button
           type="submit"
-          className="w-full bg-[#9067C6] text-white py-3 rounded-md hover:bg-[#9067C6] focus:outline-none"
+          className="w-full bg-[#9067C6] text-white py-3 rounded-md hover:bg-[#CAC4CE] focus:outline-none"
         >
           Send Message
         </button>
