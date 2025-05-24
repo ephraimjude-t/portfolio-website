@@ -3,7 +3,7 @@ import Contactme from '../Components/Contact';
 
 const Contact = () => {
     return (
-        <div className=" bg-[#242038] bg-gradient-to-r from [#242038] to-[#665A9E] h-screen w-full flex flex-col items-center relative overflow-auto z-[0]" style={{
+        <div className=" bg-[#242038] bg-gradient-to-r from [#242038] to-[#665A9E] h-screen w-full flex flex-col items-center relative overflow-hidden z-[0]" style={{
                 animation: "gradient-bg 7s ease infinite",
                 backgroundSize: "200% 200%",
             }}>

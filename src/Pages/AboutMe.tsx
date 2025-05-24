@@ -32,24 +32,7 @@ const About = () => {
             ">
                 With a solid foundation in backend development (using Python and frameworks like FastAPI), coupled with a growing expertise in React, TypeScript, and TailwindCSS for frontend development, I aim to deliver impactful solutions that are both intuitive and high-performing.
         </motion.p>
-        <motion.p
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-[#CAC4CE] text-lg text-center font-semibold font-montserrat z-[1] transition-opacity duration-500 ease-in-out
-            relative top-[7vh] p-5 flex flex-col items-center w-[70vw] leading-relaxed text-justify
-            ">
-                In addition to coding, I enjoy learning about the latest trends in AI, machine learning, and DevOps, and am always seeking opportunities to integrate these into my projects. I believe in the power of continuous learning and adapting to new challenges, which has made me a versatile developer ready to take on any project.
-        </motion.p>
-        <motion.p
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-[#CAC4CE] text-lg text-center font-semibold font-montserrat z-[1] transition-opacity duration-500 ease-in-out
-            relative top-[7vh] p-5 flex flex-col items-center w-[70vw] leading-relaxed text-justify
-            ">
-                I thrive in the freelance world because it gives me the freedom to work on a variety of interesting projects, solve complex problems, and collaborate with clients to turn their ideas into reality.
-        </motion.p>
+
         <motion.p
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
